@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "myakscluster01-bda7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "myakscluster01-bda7"
+  template:
+    metadata:
+      labels:
+        app: "myakscluster01-bda7"
+    spec:
+      containers:
+        - name: "myakscluster01-bda7"
+          image: "mynewaksacr01.azurecr.io/myakscluster01"
+          ports:
+          - containerPort: 5000
