@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 # list of cat images
-images = ["https://miscestorageaccount.blob.core.windows.net/img-con/cat1.png","https://miscestorageaccount.blob.core.windows.net/img-con/cat2.png"]
+images = ["https://mystoreaccount01.blob.core.windows.net/images/Cat1.jpg","https://mystoreaccount01.blob.core.windows.net/images/cat2.jpg"]
 
 @app.route('/')
 def index():
