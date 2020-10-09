@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "myakscluster01-bda7"
+    labels:
+        app: "myakscluster01-bda7"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+      name: http
+    selector:
+        app: "myakscluster01-bda7"
